@@ -5,7 +5,10 @@ import android.view.View
 import android.widget.Button
 import com.alibaba.android.arouter.launcher.ARouter
 import com.note.demo.constants.PathConstants
+import note.com.apt_lib.AutoCreat
 
+//TODO  AutoCreat自定义注解 gradle 2.3运行成功，3.0运行失败
+@AutoCreat
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
