@@ -19,8 +19,5 @@ import java.lang.annotation.Repeatable;
 	String role();
 }
 
-@interface Authorities {
-	Authority[] value();
-}
 
 

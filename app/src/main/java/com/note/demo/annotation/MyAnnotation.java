@@ -11,5 +11,12 @@ package com.note.demo.annotation;
  * <Author>      <Time>    <version>    <desc>
  * chenyun      10:19    3.0.5           Create
  */
+//@Authority(role = "")
+//@Authority(role = "23")
 public class MyAnnotation {
+
+	@Deprecated
+	public void getName(){
+
+	}
 }

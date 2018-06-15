@@ -22,4 +22,5 @@ public  class TestClass {
 		public void getName(){}
 	}
 	public static void getName(){}
+
 }

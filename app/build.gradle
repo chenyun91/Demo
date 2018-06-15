@@ -10,8 +10,8 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.note.demo"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion 16
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
