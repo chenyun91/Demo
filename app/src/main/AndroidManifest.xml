@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ArouterMainActivity"/>
+        <activity android:name=".dagger.DaggerDemoActivity"/>
     </application>
 
 </manifest>

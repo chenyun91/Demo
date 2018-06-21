@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -24,6 +25,7 @@ android {
             arguments {
                 arg("moduleName", project.getName())
             }
+            generateStubs = true
         }
         buildConfigField("boolean", "DEMO_TEST", "true")
     }
@@ -50,4 +52,7 @@ dependencies {
 
     compile project(':apt-lib')
     annotationProcessor project(':process-lib')
+
+    compile 'com.google.dagger:dagger:2.14.1'
+    kapt 'com.google.dagger:dagger-compiler:2.14.1'
 }
