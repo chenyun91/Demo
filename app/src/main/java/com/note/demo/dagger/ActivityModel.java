@@ -2,6 +2,8 @@ package com.note.demo.dagger;
 
 import android.content.Context;
 
+import com.note.demo.dagger.LifeCycle.PerActivity;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -18,8 +20,18 @@ import dagger.Provides;
  */
 @Module
 public class ActivityModel {
+//	@Named("context")
+	@PersonForContext
 	@Provides
-	Person providerPerson(Context context){
+	@PerActivity
+	Person providerPersonContext(Context context) {
 		return new Person(context);
+	}
+
+//	@Named("name") //不同参数创建对象
+	@PersonForName
+	@Provides
+	Person providerPersonName() {
+		return new Person("1234");
 	}
 }

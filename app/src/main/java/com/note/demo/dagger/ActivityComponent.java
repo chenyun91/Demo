@@ -1,5 +1,7 @@
 package com.note.demo.dagger;
 
+import com.note.demo.dagger.LifeCycle.PerActivity;
+
 import dagger.Component;
 
 /**
@@ -13,6 +15,8 @@ import dagger.Component;
  * <Author>      <Time>    <version>    <desc>
  * chenyun      18:27    3.0.5           Create
  */
+
+@PerActivity
 @Component(modules = ActivityModel.class,dependencies = AppComponent.class)
 public interface ActivityComponent {
 	void inject(DaggerDemoActivity activity);

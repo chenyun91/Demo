@@ -3,7 +3,6 @@ package com.note.demo.dagger;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.note.demo.R;
 
@@ -22,18 +21,27 @@ import javax.inject.Inject;
  */
 public class DaggerDemoActivity extends Activity {
 
+//	@Named("context")
+	@PersonForContext
 	@Inject
 	Person person;
+//	@Named("context")
+	@PersonForContext
 	@Inject
 	Person person1;
+
+//	@Named("name")
+	@PersonForName
+	@Inject
+	Person person2;
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		MainComponent component = DaggerMainComponent.builder().modelClass(new ModelClass(this)).build();
-		component.inject(this);
-		Log.d("chenyun", person.toString() + "-----------" + person1.toString());
+//		MainComponent component = DaggerMainComponent.builder().modelClass(new ModelClass(this)).build();
+//		component.inject(this);
+//		Log.d("chenyun", person.toString() + "-----------" + person1.toString()+"\nperson2"+person2.toString());
 
 
 		AppComponent appComponent = DaggerAppComponent.builder().appModel(new AppModel(this)).build();

@@ -26,4 +26,8 @@ class Person {
         mContext = context
         Log.i("chenyun", "-------------new person-------------")
     }
+
+    constructor(name: String) {
+        Log.i("chenyun","--------name"+name)
+    }
 }
