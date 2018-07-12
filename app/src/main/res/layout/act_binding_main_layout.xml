@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.note.demo.binding.DataBindingMainActivity"/>
+
+        <variable
+            name="content"
+            type="String"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->activity.clickText()}"
+            android:text="000"
+            android:textSize="19dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->activity.clickText()}"
+            android:text="@{content}"
+            android:textSize="19dp"/>
+        <TextView
+            android:id="@+id/tv_span"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:text="我已阅读并确认《债权转让协议》啊啊啊啊啊啊啊啊《出借人居间服务协议》啊啊啊啊啊啊啊啊《网络借贷风险及禁止性行为提示》啊啊啊啊啊啊啊啊《出借人自动投标授权书》啊啊啊啊啊啊啊啊"/>
+    </LinearLayout>
+
+</layout>
+

@@ -1,1 +1,1 @@
-include ':app', ':apt-lib', ':process-lib', ':dagger2'
+include ':app', ':apt-lib', ':process-lib', ':dagger2', ':customview', ':databindingdemo'

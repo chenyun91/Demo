@@ -2,6 +2,7 @@ package com.note.demo
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
+import com.tencent.bugly.Bugly
 
 /**
  * Copyright (C), 2011-2018 掌存宝
@@ -22,5 +23,7 @@ class AppApplication : Application() {
             ARouter.openDebug()
         }
         ARouter.init(this)
+//        CrashReport.initCrashReport(getApplicationContext(), "e4d2de029f", false);
+        Bugly.init(getApplicationContext(), "e4d2de029f", false);
     }
 }
